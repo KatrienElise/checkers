@@ -1,0 +1,4 @@
+? Do walkers need to be malloced
+? Initizlise the whole swap to zero in begin
+
+*** CHANGE LIBFT FOR MY OWN****
