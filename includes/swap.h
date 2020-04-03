@@ -55,4 +55,5 @@ void    rise(t_swap *swap);
 
 void    heart_push(t_data **stack_a, int ac);
 void    choose_algo(t_swap *swap);
+//just a test to git
 #endif
