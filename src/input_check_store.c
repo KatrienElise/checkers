@@ -44,6 +44,7 @@ void    ics_get_end_a(t_swap *swap)
     while (walker->next != NULL)
         walker = walker->next;
     swap->end_stack_a = walker;
+    //free(walker); ( if i do this the commands dont work any more)
 }
 
 void    ics_get_end_b(t_swap *swap)
@@ -57,6 +58,7 @@ void    ics_get_end_b(t_swap *swap)
     while (walker->next != NULL)
         walker = walker->next;
     swap->end_stack_b = walker;
+   // free(walker);
 }
 
 t_data   *input_check_store(char **str, int ac)
@@ -69,27 +71,29 @@ t_data   *input_check_store(char **str, int ac)
     j = 0;
     hold = 0;
 
+    // moet ik stack_a mallocen? en temp??
     stack_a = NULL;
     while(j < (ac - 1))
     {
         hold = ft_atoi(str[j]);
         if ((!hold) || (hold > 2147483647) || (hold < -2147483648)) // deze doet het nog niet
             error(2);
-        //check for doubles
         temp = make_list_value(hold);
         if (!temp)
             error(1); //hier kan er al gemalloced zijn 
         if (stack_a == NULL)
         {
-            stack_a = (t_data*)malloc(sizeof(t_data));
-            if (!stack_a)
-                error(1);
+           // stack_a = (t_data*)malloc(sizeof(t_data));
+           // if (!stack_a)
+           //     error(1);
             stack_a = temp;
         }
         else
-            add_data_front(&stack_a, temp);
+            add_data_back(stack_a, temp);
+            //add_data_front(&stack_a, temp);
             //if it needs to be around i will make add_data_back
         j++;
     }
+    // free (temp);
     return (stack_a);
 }

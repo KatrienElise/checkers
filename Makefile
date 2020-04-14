@@ -1,13 +1,14 @@
-
+#zoek uit de .PHONEY: all clean fclaen re push_swap checker reclean
 NAME_1 = push_swap
 NAME_2 = checkers
 FLAGS = -Wall -Wextra -Werror
 #GCC = gcc
 FUNCS = src/input_check_store.c src/store.c src/error.c src/test.c src/heart.c \
-src/steps_choose.c #src/heart_push.c
+src/steps_choose.c #src/heart_push.c #src/ps_choose_algo.c
 OBJ = $(FUNCS:.c =.o)
 L_C = libft/*.c
 L_O = $(L_C:.c = .o)
+
 #INCL = includes/swap.h
 
 # target: dependencies

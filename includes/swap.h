@@ -21,7 +21,7 @@ typedef  struct     s_swap
     t_data         *end_stack_a;
     t_data         *end_stack_b;
     int             aca;
-    int             count;
+    int             n;
     int             acb;
     int             algo;
     char            *step;       
@@ -37,8 +37,10 @@ t_data  *create_b(int ac);
 t_data   *make_list_value(int hold);
 void    add_prev(t_data **newy, t_data *stack_a);
 void    add_data_front(t_data **stack_a, t_data *newy);
+void    add_data_back(t_data *stack_a, t_data *temp);
 
 void    error(int i);
+void    free_all(t_swap *swap);
 
 void    test_print_list(t_swap *swap);
 int    last_check(t_swap *swap);
@@ -54,6 +56,13 @@ void    drown(t_swap *swap);
 void    rise(t_swap *swap);
 
 void    heart_push(t_data **stack_a, int ac);
+void    get_algo(t_swap *swap);
+
 void    choose_algo(t_swap *swap);
-//just a test to git
+void    algo_two(t_swap *swap);
+void    algo_three(t_swap *swap);
+void    algo_five(t_swap *swap);
+
+void    algo_mpv(t_swap *swap);
+
 #endif

@@ -42,6 +42,30 @@ void    add_data_front(t_data **stack_a, t_data *newy)
     *stack_a = newy;
 }
 
+void    add_data_back(t_data *stack_a, t_data *newy)
+{
+    t_data  *walker;
+
+    walker = stack_a;
+    //do i want to  malloc the walker and free in the end? 
+    while (walker->next != NULL)
+    {
+        if (newy->value != walker->value)
+            walker = walker->next;
+        else
+        error(4);
+    }
+    if (newy->value != walker->value)
+    {
+        walker->next = newy;
+        newy->next = NULL;
+        newy->prev = walker;
+
+    }
+    else
+        error(4);
+}
+
 int    check_step(t_swap *swap, char *str)
 {
     ft_putstr("in store stept\n");

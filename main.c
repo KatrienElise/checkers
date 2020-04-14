@@ -14,8 +14,9 @@ int     main(int argc, char **argv)
         //ft_putstr("heart_between tests\n");
         if (argv[0][2] == 'c')
         {
+            ft_putstr("start checkers\n");
             heart_entry(&stack_a, argc);
-            free(stack_a);
+        //free(stack_a); // moet de stack niet door een loop in free functie om alles te freeen?
             exit(0);
         }
         if (argv[0][2] == 'p')

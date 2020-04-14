@@ -63,6 +63,11 @@ int    last_check(t_swap *swap)
         ft_putstr("ko\n");
         return (0);
     }
+    if (swap->aca == 1)
+    {
+        ft_putstr("OK\n");
+        return (0);
+    }
     a = 0;
     walker = swap->end_stack_a;
     walker1 = swap->end_stack_a;

@@ -1,4 +1,24 @@
-? Do walkers need to be malloced
-? Initizlise the whole swap to zero in begin
+What if i make two  mains one for checker and one for push_swap
+and for each program, only the right main is compiled.
 
 *** CHANGE LIBFT FOR MY OWN****
+
+-1 leak. I am losing a pointer somewhere
+-when doing pa with full pb (and ampty pa) there is a mix up
+-everytime I do a command I get a extra leak and there is one before the commands start
+- can't enter 0 as number or integer in checkers
+-good makefile
+
+
+VOOR NU:
+-make function for 3 numbers
+-have mpv function
+-check last_check in beginning, then the aca. 
+-if aca is bigger ten 5 go to mpv
+
+1-after mpv, go trough whole list in 2 threads from bottom and top to 
+find numbers lower then mpv, they go the stack b. 
+1-while they go to stack b, (its the n (aca /2) amount of numbers) that move
+to stack b and they get a id tack. The first time it's 1. In the id tack they also store there amount n.
+1-if stack a is still not 3. (first time it's to check n), it goes again to mpv
+and n changes to n/2. step 2 will be repeated. Only now the id tack is 2. 
