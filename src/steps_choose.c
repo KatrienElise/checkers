@@ -16,6 +16,10 @@ void    steps_choose(t_swap *swap)
         else
             drown(swap);
     }
+    //verandert dit het printen in checkers?
+    ft_putstr(swap->step);
+    ft_putstr(":\n");
+    test_print_list(swap);
 }
 
 void    swaps(t_swap *swap)

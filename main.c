@@ -22,7 +22,7 @@ int     main(int argc, char **argv)
         if (argv[0][2] == 'p')
         {
             ft_putstr("start push_swap\n");
-            //heart_push(&stack_a, argc);
+            heart_push(&stack_a, argc);
         }
     }
     else

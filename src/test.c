@@ -66,7 +66,7 @@ int    last_check(t_swap *swap)
     if (swap->aca == 1)
     {
         ft_putstr("OK\n");
-        return (0);
+        return (1);
     }
     a = 0;
     walker = swap->end_stack_a;
@@ -82,6 +82,6 @@ int    last_check(t_swap *swap)
         else
             return (0);
     }
-    ft_putstr("OK\n");
+    ft_putstr("OKOK\n");
     return (1);
 }

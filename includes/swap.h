@@ -24,6 +24,7 @@ typedef  struct     s_swap
     int             n;
     int             acb;
     int             algo;
+    char            stack;
     char            *step;       
 }                   t_swap;
 
@@ -58,11 +59,10 @@ void    rise(t_swap *swap);
 void    heart_push(t_data **stack_a, int ac);
 void    get_algo(t_swap *swap);
 
-void    choose_algo(t_swap *swap);
-void    algo_two(t_swap *swap);
-void    algo_three(t_swap *swap);
-void    algo_five(t_swap *swap);
-
-void    algo_mpv(t_swap *swap);
+void    choose_algo(t_swap *swap, char stack);
+void    algo_two(t_swap *swap, char stack);
+void    algo_three(t_swap *swap, char stack);
+void    algo_five(t_swap *swap, char stack);
+void    algo_mpv(t_swap *swap, char stack);
 
 #endif
